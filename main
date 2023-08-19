@@ -169,11 +169,12 @@ int main()
 						}
 
 					}
+					else { // 16 - 18 block
+
+					}
 					
 				}
-				else { // 19 - 24 block
-
-				}
+				
 			}
 		}
 	else {
