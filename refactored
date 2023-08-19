@@ -29,9 +29,10 @@ int main()
 			// cout << guesses[i-1] << " ";
 		}
 
-	} else { // 50 - 100 block
+	}
+	else { // 50 - 100 block
 		guesses.clear();
-		for (int i = median; i <= median*2; i++) {
+		for (int i = median; i <= median * 2; i++) {
 			guesses.push_back(i);
 		}
 		/* for (int j = 1; j < 52; j++) {
@@ -44,16 +45,16 @@ int main()
 
 	cout << "Is the number less than " << median << "? ";
 	cin >> q2;
-	if (q2 == 'y') { 
+	if (q2 == 'y') {
 		guesses.clear();
 		for (int i = 1; i < median; i++) {
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
 	}
-	else { 
+	else {
 		guesses.clear();
-		for (int i = median; i <= median*2; i++) {
+		for (int i = median; i <= median * 2; i++) {
 			guesses.push_back(i);
 		}
 		/* for (int j = 1; j < 52; j++) {
@@ -75,7 +76,7 @@ int main()
 	}
 	else {
 		guesses.clear();
-		for (int i = median; i <= median*2; i++) {
+		for (int i = median; i <= median * 2; i++) {
 			guesses.push_back(i);
 		}
 		/* for (int j = 1; j < 52; j++) {
@@ -83,7 +84,107 @@ int main()
 		} */
 	}
 	median = guesses[guesses.size() / 2];
-	
+
+	// ------------------------Question 4
+
+	cout << "Is the number less than " << median << "? ";
+	cin >> q4;
+	if (q4 == 'y') {
+		guesses.clear();
+		for (int i = 1; i < median; i++) {
+			guesses.push_back(i);
+			// cout << guesses[i-1] << " ";
+		}
+	}
+	else {
+		guesses.clear();
+		for (int i = median; i <= median * 2; i++) {
+			guesses.push_back(i);
+		}
+		/* for (int j = 1; j < 52; j++) {
+			// cout << guesses[j - 1] << " ";
+		} */
+	}
+	median = guesses[guesses.size() / 2];
+
+	//----------------Question 5
+
+	cout << "Is the number less than " << median << "? ";
+	cin >> q5;
+	if (q5 == 'y') {
+		guesses.clear();
+		for (int i = 1; i < median; i++) {
+			guesses.push_back(i);
+			// cout << guesses[i-1] << " ";
+		}
+	}
+	else {
+		guesses.clear();
+		for (int i = median; i <= median * 2; i++) {
+			guesses.push_back(i);
+		}
+		/* for (int j = 1; j < 52; j++) {
+			// cout << guesses[j - 1] << " ";
+		} */
+	}
+	median = guesses[guesses.size() / 2];
+
+	//-----------------Question 6
+
+	cout << "Is the number less than " << median << "? ";
+	cin >> q6;
+	if (q6 == 'y') {
+		guesses.clear();
+		for (int i = 1; i < median; i++) {
+			guesses.push_back(i);
+			// cout << guesses[i-1] << " ";
+		}
+		if (guesses.size() == 1) {
+			cout << "The number you are thinking of is " << guesses[0];
+		}
+	}
+	else {
+		guesses.clear();
+		for (int i = median; i <= median * 2; i++) {
+			guesses.push_back(i);
+		}
+		/* for (int j = 1; j < 52; j++) {
+			// cout << guesses[j - 1] << " ";
+		} */
+		if (guesses.size() == 1) {
+			cout << "The number you are thinking of is " << guesses[0];
+		}
+	}
+	median = guesses[guesses.size() / 2];
+
+	//-----------------Question 7
+
+	cout << "Is the number less than " << median << "? ";
+	cin >> q7;
+	if (q7 == 'y') {
+		guesses.clear();
+		for (int i = 1; i < median; i++) {
+			guesses.push_back(i);
+			// cout << guesses[i-1] << " ";
+		}
+		if (guesses.size() == 1) {
+			cout << "The number you are thinking of is " << guesses[0];
+		}
+	}
+	else {
+		guesses.clear();
+		for (int i = median; i <= median * 2; i++) {
+			guesses.push_back(i);
+		}
+		/* for (int j = 1; j < 52; j++) {
+			// cout << guesses[j - 1] << " ";
+		} */
+		if (guesses.size() == 1) {
+			cout << "The number you are thinking of is " << guesses[0];
+		}
+	}
+	median = guesses[guesses.size() / 2];
+
 
 	return 0;
 }
