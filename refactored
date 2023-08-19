@@ -26,11 +26,8 @@ int main()
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
-		median = guesses[guesses.size() / 2];
 
-	}
-
-else { // 50 - 100 block
+	} else { // 50 - 100 block
 		guesses.clear();
 		for (int i = 50; i <= 100; i++) {
 			guesses.push_back(i);
@@ -39,6 +36,28 @@ else { // 50 - 100 block
 			// cout << guesses[j - 1] << " ";
 		} */
 	}
+	median = guesses[guesses.size() / 2];
+
+	cout << "Is the number less than " << median << "? ";
+	cin >> q2;
+	if (q2 == 'y') { 
+		guesses.clear();
+		for (int i = 1; i < 25; i++) {
+			guesses.push_back(i);
+			// cout << guesses[i-1] << " ";
+		}
+
+	}
+	else { 
+		guesses.clear();
+		for (int i = 25; i <= 50; i++) {
+			guesses.push_back(i);
+		}
+		/* for (int j = 1; j < 52; j++) {
+			// cout << guesses[j - 1] << " ";
+		} */
+	}
+	median = guesses[guesses.size() / 2];
 	
 
 	return 0;
