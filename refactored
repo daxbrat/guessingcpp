@@ -1,0 +1,40 @@
+#include "std_lib_facilities.h"
+
+int main()
+{ //---------------Refactor to use vector and median----------------------
+	cout << "Pick a number in your head between 1 and 100\n";
+	char q1{};
+	char q2{};
+	char q3{};
+	char q4{};
+	char q5{};
+	char q6{};
+	char q7{};
+	vector<int>guesses{};
+	int median{};
+
+	cout << "Is the number less than 50? ";
+	cin >> q1;
+	if (q1 == 'y') { // 1 - 49 block
+		for (int i = 1; i < 50; i++) {
+			guesses.push_back(i);
+			// cout << guesses[i-1] << " ";
+		}
+		median = guesses[guesses.size() / 2];
+
+	}
+		
+	//---------------------------------------------------------------------------------------
+
+else { // 50 - 100 block
+		for (int i = 50; i <= 100; i++) {
+			guesses.push_back(i);
+		}
+		/* for (int j = 1; j < 52; j++) {
+			// cout << guesses[j - 1] << " ";
+		} */
+	}
+	median = guesses[guesses.size() / 2];
+
+	return 0;
+}
