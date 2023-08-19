@@ -16,7 +16,7 @@ int main()
 	for (int i = 1; i <= 100; i++) {
 		guesses.push_back(i);
 	}
-	median = guesses[guesses.size() / 2];
+	median = guesses[(guesses.size() / 2)-1];
 
 	//----------Question 1
 
@@ -45,16 +45,16 @@ int main()
 
 	cout << "Is the number less than " << median << "? ";
 	cin >> q2;
-	if (q2 == 'y') {
+	if (q2 == 'y') { 
 		guesses.clear();
 		for (int i = 1; i < median; i++) {
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
 	}
-	else {
+	else {  
 		guesses.clear();
-		for (int i = median; i <= median * 2; i++) {
+		for (int i = median; i <= median + 25; i++) {
 			guesses.push_back(i);
 		}
 		/* for (int j = 1; j < 52; j++) {
@@ -67,16 +67,16 @@ int main()
 
 	cout << "Is the number less than " << median << "? ";
 	cin >> q3;
-	if (q3 == 'y') {
+	if (q3 == 'y') {  // 1 - 13 block
 		guesses.clear();
 		for (int i = 1; i < median; i++) {
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
 	}
-	else {
+	else {  // 14 - 25 block
 		guesses.clear();
-		for (int i = median; i <= median * 2; i++) {
+		for (int i = median; i <= median + 13; i++) {
 			guesses.push_back(i);
 		}
 		/* for (int j = 1; j < 52; j++) {
@@ -98,7 +98,7 @@ int main()
 	}
 	else {
 		guesses.clear();
-		for (int i = median; i <= median * 2; i++) {
+		for (int i = median; i <= median + 7; i++) {
 			guesses.push_back(i);
 		}
 		/* for (int j = 1; j < 52; j++) {
@@ -120,7 +120,7 @@ int main()
 	}
 	else {
 		guesses.clear();
-		for (int i = median; i <= median * 2; i++) {
+		for (int i = median; i <= median + 4; i++) {
 			guesses.push_back(i);
 		}
 		/* for (int j = 1; j < 52; j++) {
@@ -145,7 +145,7 @@ int main()
 	}
 	else {
 		guesses.clear();
-		for (int i = median; i <= median * 2; i++) {
+		for (int i = median; i <= median + 2; i++) {
 			guesses.push_back(i);
 		}
 		/* for (int j = 1; j < 52; j++) {
@@ -173,7 +173,7 @@ int main()
 	}
 	else {
 		guesses.clear();
-		for (int i = median; i <= median * 2; i++) {
+		for (int i = median; i <= median; i++) {
 			guesses.push_back(i);
 		}
 		/* for (int j = 1; j < 52; j++) {
