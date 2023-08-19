@@ -1,0 +1,196 @@
+#include "std_lib_facilities.h"
+
+int main()
+{
+	cout << "Pick a number in your head between 1 and 100\n";
+	char q1{};
+	char q2{};
+	char q3{};
+	char q4{};
+	char q5{};
+	char q6{};
+	char q7{};
+	vector<int>guesses{};
+
+	cout << "Is the number less than 50? ";
+	cin >> q1;
+	if (q1 == 'y') { // 1 - 49 block
+		for (int i = 1; i < 50; i++) {
+			guesses.push_back(i);
+			// cout << guesses[i-1] << " ";
+		}
+
+
+		cout << "Is the number less than 25? ";
+		cin >> q2;
+		if (q2 == 'y') {  // 1 - 25 block
+			guesses.clear();
+			for (int i = 1; i < 25; i++) {
+				guesses.push_back(i);
+				// cout << guesses[i - 1] << " ";
+			}
+			cout << "Is the number less than 13? ";
+			cin >> q3;
+			if (q3 == 'y') { // 1 - 12 block
+				cout << "Is the number less than 7? ";
+				cin >> q4;
+				if (q4 == 'y') { // 1 - 6 block
+					guesses.clear();
+					for (int i = 1; i < 7; i++) {
+						guesses.push_back(i);
+						// cout << guesses[i - 1] << " ";
+					}
+					cout << "Is the number less than 4? ";
+					cin >> q5;
+					if (q5 == 'y') { // 1 - 3 block
+						guesses.clear();
+						for (int i = 1; i < 4; i++) {
+							guesses.push_back(i);
+							// cout << guesses[i - 1] << " ";
+						}
+						cout << "Is the number less than 2? ";
+						cin >> q6;
+						if (q6 == 'y') { // answer found
+							cout << "The number is 1";
+						}
+
+
+						else { // 2 or 3 block
+							guesses.clear();
+							for (int i = 2; i < 4; i++) {
+								guesses.push_back(i);
+							}
+							/* for (int j = 1; j <= 2; j++) {
+								cout << guesses[j - 1] << " ";
+							}*/
+							cout << "Is the number less than 3? ";
+							cin >> q7;
+							if (q7 == 'y') { // answer found
+								cout << "The number is 2";
+							}
+							else { // answer found
+								cout << "The number is 3";
+							}
+						}
+
+					}
+					else { // 4-6 block
+						guesses.clear();
+						for (int i = 4; i < 7; i++) {
+							guesses.push_back(i);
+						}
+						for (int j = 1; j <= 3; j++) {
+							//cout << guesses[j - 1] << " ";
+						}
+						cout << "Is the number less than 5? ";
+						cin >> q6;
+						if (q6 == 'y') { // answer found
+							cout << "The number is 4";
+						}
+						else { // 5 or 6 block
+							cout << "Is the number less than 6? ";
+							cin >> q7;
+							if (q7 == 'y') { // answer found
+								cout << "The number is 5";
+							}
+							else { // answer found
+								cout << "The number is 6";
+							}
+
+						}
+					}
+
+
+				}
+				else { // 7 - 12 block
+					cout << "Is the number less than 10? ";
+					cin >> q5;
+					if (q5 == 'y') {
+						// 7-9 block
+						cout << "Is the number less than 8? ";
+						cin >> q6;
+						if (q6 == 'y') { // answer found
+							cout << "The number is 7";
+						}
+						else { // 8 or 9 block
+							cout << "Is the number less than 9? ";
+							cin >> q7;
+							if (q7 == 'y') { // answer found
+								cout << "The number is 8";
+							}
+							else { // answer found
+								cout << "The number is 9";
+							}
+
+						}
+					}
+					else { // 10 - 12 block
+						cout << "Is the number less than 11? ";
+						cin >> q6;
+						if (q6 == 'y') { // answer found
+							cout << "The number is 10";
+						}
+						else { // 11 or 12 block
+							cout << "Is the number less than 12? ";
+							cin >> q7;
+							if (q7 == 'y') { // answer found
+								cout << "The number is 11";
+							}
+							else { // answer found
+								cout << "The number is 12";
+							}
+
+						}
+					}
+				}
+
+			}
+			else { // 13 - 24 block
+				cout << "Is the number less than 19? ";
+				cin >> q4;
+				if (q4 == 'y') { // 13 - 18 block
+					cout << "Is the number less than 16? ";
+					cin >> q5;
+					if (q5 == 'y') { // 13 - 15 block
+						cout << "Is the number less than 14? ";
+						cin >> q6;
+						if (q6 == 'y') { // answer found
+							cout << "The number is 13";
+						}
+						else { // 14 or 15 block
+							cout << "Is the number less than 15? ";
+							cin >> q7;
+							if (q7 == 'y') { // answer found
+								cout << "The number is 14";
+							}
+							else { // answer found
+								cout << "The number is 15";
+							}
+						}
+
+					}
+					
+				}
+				else { // 19 - 24 block
+
+				}
+			}
+		}
+	else {
+		// 25 - 49 block
+		
+	}
+}
+	//---------------------------------------------------------------------------------------
+
+else { // 50 - 100 block
+		for (int i = 50; i <= 100; i++) {
+			guesses.push_back(i);
+		}
+		/* for (int j = 1; j < 52; j++) {
+			// cout << guesses[j - 1] << " ";
+		} */
+	}
+
+	return 0;
+}
