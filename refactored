@@ -18,6 +18,8 @@ int main()
 	}
 	median = guesses[guesses.size() / 2];
 
+	//----------Question 1
+
 	cout << "Is the number less than " << median << "? ";
 	cin >> q1;
 	if (q1 == 'y') { // 1 - 49 block
@@ -38,6 +40,8 @@ int main()
 	}
 	median = guesses[guesses.size() / 2];
 
+	//----Question 2
+
 	cout << "Is the number less than " << median << "? ";
 	cin >> q2;
 	if (q2 == 'y') { 
@@ -46,7 +50,6 @@ int main()
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
-
 	}
 	else { 
 		guesses.clear();
@@ -58,6 +61,8 @@ int main()
 		} */
 	}
 	median = guesses[guesses.size() / 2];
+
+	//----Question 3
 	
 
 	return 0;
