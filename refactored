@@ -47,7 +47,7 @@ int main()
 	cin >> q2;
 	if (q2 == 'y') {
 		guesses.clear();
-		for (int i = 1; i < median; i++) {
+		for (int i = median - 25; i < median; i++) {
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
@@ -69,7 +69,7 @@ int main()
 	cin >> q3;
 	if (q3 == 'y') {  // 1 - 13 block
 		guesses.clear();
-		for (int i = 1; i < median; i++) {
+		for (int i = median - 13; i < median; i++) {
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
