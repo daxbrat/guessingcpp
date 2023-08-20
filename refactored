@@ -178,6 +178,7 @@ int main()
 		}
 	}
 	median = guesses[guesses.size() / 2];
+	system("pause>0");
 
 
 	return 0;
