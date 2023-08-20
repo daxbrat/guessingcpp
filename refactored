@@ -16,7 +16,7 @@ int main()
 	for (int i = 1; i <= 100; i++) {
 		guesses.push_back(i);
 	}
-	median = guesses[(guesses.size() / 2)-1];
+	median = guesses[(guesses.size() / 2) - 1];
 
 	//----------Question 1
 
@@ -45,14 +45,14 @@ int main()
 
 	cout << "Is the number less than " << median << "? ";
 	cin >> q2;
-	if (q2 == 'y') { 
+	if (q2 == 'y') {
 		guesses.clear();
 		for (int i = 1; i < median; i++) {
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
 	}
-	else {  
+	else {
 		guesses.clear();
 		for (int i = median; i <= median + 25; i++) {
 			guesses.push_back(i);
@@ -91,7 +91,7 @@ int main()
 	cin >> q4;
 	if (q4 == 'y') {
 		guesses.clear();
-		for (int i = 1; i < median; i++) {
+		for (int i = median - 7; i < median; i++) {
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
@@ -113,7 +113,7 @@ int main()
 	cin >> q5;
 	if (q5 == 'y') {
 		guesses.clear();
-		for (int i = 1; i < median; i++) {
+		for (int i = median - 4; i < median; i++) {
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
@@ -135,7 +135,7 @@ int main()
 	cin >> q6;
 	if (q6 == 'y') {
 		guesses.clear();
-		for (int i = 1; i < median; i++) {
+		for (int i = median - 2; i < median; i++) {
 			guesses.push_back(i);
 			// cout << guesses[i-1] << " ";
 		}
@@ -162,14 +162,8 @@ int main()
 	cout << "Is the number less than " << median << "? ";
 	cin >> q7;
 	if (q7 == 'y') {
-		guesses.clear();
-		for (int i = 1; i < median; i++) {
-			guesses.push_back(i);
-			// cout << guesses[i-1] << " ";
-		}
-		if (guesses.size() == 1) {
 			cout << "The number you are thinking of is " << guesses[0];
-		}
+		
 	}
 	else {
 		guesses.clear();
